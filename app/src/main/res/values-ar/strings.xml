@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BloodBank</string>
+    <string name="copyright"> جميع الحقوق محفوظة لشركة ابداع تك للبرمجيات&#169;2018</string>
+    <string name="skip">تخطى</string>
+    <string name="mobile">الجوال</string>
+    <string name="remember">تذكرنى</string>
+    <string name="sign_in"> تسجيل الدخول</string>
+    <string name="register">انشاء حساب جديد</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forget_password">هل نسيت كلمة السر</string>
+</resources>
