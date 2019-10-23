@@ -11,6 +11,11 @@
     <string name="register">Register</string>
     <string name="password">Password</string>
     <string name="forget_password">Did you forget password</string>
+    <string name="send">Send</string>
+    <string name="forgetpasswordtxt">Forget Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="verfication_code">verfication code</string>
+    <string name="confirm_new_password">confirm new password</string>
 
 
 </resources>

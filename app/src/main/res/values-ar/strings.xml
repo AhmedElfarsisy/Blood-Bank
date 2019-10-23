@@ -8,5 +8,10 @@
     <string name="sign_in"> تسجيل الدخول</string>
     <string name="register">انشاء حساب جديد</string>
     <string name="password">كلمة المرور</string>
-    <string name="forget_password">هل نسيت كلمة السر</string>
+    <string name="forget_password">هل نسيت كلمة المرور</string>
+    <string name="send">ارسال</string>
+    <string name="forgetpasswordtxt">نسيت كلمة المرور</string>
+    <string name="change_password">تغير كلمة المرور</string>
+    <string name="verfication_code">كود التحقق</string>
+    <string name="confirm_new_password">تأكيد كلمه المرور الجديدة</string>
 </resources>
