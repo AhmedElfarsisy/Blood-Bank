@@ -55,7 +55,6 @@ public class SliderFragment extends Fragment {
         timer.scheduleAtFixedRate(new SliderFragment.Slidermove(), 3000, 2000);
         viewPager.setAdapter(sildeAdapter);
         tableLayout.setupWithViewPager(viewPager, true);
-        skip.setVisibility(View.INVISIBLE);
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,9 +73,10 @@ public class SliderFragment extends Fragment {
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
+
                     if (viewPager.getCurrentItem() != instractList.size() - 1) {
+                       viewPager.scrollBy(2,2);
                         viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
-                        skip.setVisibility(View.VISIBLE);
 
                     } else {
                         viewPager.setCurrentItem(0);

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -27,7 +28,7 @@ public class ChangePasswordFragment extends Fragment {
     EditText verficationcode;
     EditText newPassword;
     EditText confirmnewpassword;
-    Button changepasswordbtn;
+    Button changepasswordBtn;
 
     public ChangePasswordFragment() {
         // Required empty public constructor
@@ -42,30 +43,23 @@ public class ChangePasswordFragment extends Fragment {
         verficationcode = view.findViewById(R.id.verficationcode);
         newPassword = view.findViewById(R.id.newpassword);
         confirmnewpassword = view.findViewById(R.id.confirmnewpassword);
-        changepasswordbtn = view.findViewById(R.id.changepasswordbtn);
-        changepasswordbtn.setOnClickListener(new View.OnClickListener() {
+        changepasswordBtn = view.findViewById(R.id.changepasswordbtn);
+        changepasswordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String veficationCode = verficationcode.getText().toString();
-                String NewPassword = newPassword.getText().toString();
-                String Newpassword2 = confirmnewpassword.getText().toString();
 
-                if (!TextUtils.isEmpty(veficationCode) && !TextUtils.isEmpty(NewPassword) && TextUtils.equals(NewPassword, Newpassword2)) {
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
-                    dialog.setTitle("Are you sure").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(container.getContext()).setTitle("Are you sure").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
-                        }
-                    }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
-                        }
-                    });
-
-                }
-
+                    }
+                });
+           builder.create().show();
             }
         });
 
@@ -74,3 +68,29 @@ public class ChangePasswordFragment extends Fragment {
     }
 
 }
+//        changepasswordBtn.setOnClickListener(new View.OnClickListener() {
+//@Override
+//public void onClick(View view) {
+//        String veficationCode = verficationcode.getText().toString();
+//        String NewPassword = newPassword.getText().toString();
+//        String Newpassword2 = confirmnewpassword.getText().toString();
+//
+//        if (!TextUtils.isEmpty(veficationCode) && !TextUtils.isEmpty(NewPassword) && TextUtils.equals(NewPassword, Newpassword2)) {
+//        AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+//        dialog.setTitle("Are you sure").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//@Override
+//public void onClick(DialogInterface dialogInterface, int i) {
+//        dialogInterface.dismiss();
+//        }
+//        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//@Override
+//public void onClick(DialogInterface dialogInterface, int i) {
+//        dialogInterface.cancel();
+//        }
+//        });
+//
+//        } else {
+//        Toast.makeText(container.getContext(), "empty field", Toast.LENGTH_SHORT).show();
+//        }
+//        }
+//        });
