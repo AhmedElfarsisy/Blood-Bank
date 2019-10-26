@@ -22,6 +22,10 @@
     <string name="blood_type">Blood Type</string>
     <string name="birthday">Birthday</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="tab1">Article</string>
+    <string name="tab2">Donation orders</string>
+    <string name="awareness_way_from_diseases">Awareness way from diseases</string>
+    <string name="insert_search_word_here">Insert search word here...</string>
 
 
 </resources>

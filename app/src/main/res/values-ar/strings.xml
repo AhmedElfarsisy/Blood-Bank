@@ -20,4 +20,8 @@
     <string name="blood_type">فصيلة الدم</string>
     <string name="birthday">تاريخ الميلاد</string>
     <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="tab1">المقالات</string>
+    <string name="tab2">طلبات التبرع</string>
+    <string name="awareness_way_from_diseases">طريقة الوقاية من الأمراض</string>
+    <string name="insert_search_word_here">ادخل كلمة البحث هنا...</string>
 </resources>

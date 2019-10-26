@@ -119,6 +119,7 @@
 
             <Spinner
                 android:id="@+id/regGovernorate"
+                style="@style/SpinnerTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -129,14 +130,14 @@
 
             <Spinner
                 android:id="@+id/regCity"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/white"/>
+                android:background="@color/white"
+                android:theme="@style/SpinnerTheme" />
 
             <EditText
                 android:id="@+id/regPhone"
