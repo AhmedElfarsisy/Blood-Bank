@@ -116,35 +116,42 @@
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/gray" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp">
 
             <Spinner
                 android:id="@+id/regGovernorate"
-                style="@style/SpinnerTheme"
+                style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white" />
+                android:layout_height="wrap_content"/>
+                <View
+                    android:id="@+id/view"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:background="@color/lightgray"
+                    android:visibility="visible"
+                    />
 
             <Spinner
                 android:id="@+id/regCity"
+                style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/white"
-                android:theme="@style/SpinnerTheme" />
-
+                 />
+            </LinearLayout>
             <EditText
                 android:id="@+id/regPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/reg_edittext_style"

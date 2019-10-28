@@ -81,18 +81,20 @@ public class RegisterFragment extends Fragment {
         regcity = view.findViewById(R.id.regCity);
         reggovernorat = view.findViewById(R.id.regGovernorate);
         List<String> governoratList = new ArrayList<>();
+        governoratList.add("المحافظة");
         governoratList.add("Alexandria");
         governoratList.add("Aswan");
         governoratList.add("Cairo");
         governoratList.add("Dakahlia ");
         List<String> cityList = new ArrayList<>();
+        cityList.add("المدينة");
         cityList.add("Giza");
         cityList.add("Mansoura");
         cityList.add("Cairo");
         cityList.add("Alex");
-
         ArrayAdapter governoratAdapter = new ArrayAdapter(container.getContext(), android.R.layout.simple_spinner_dropdown_item, governoratList);
         governoratAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+
         reggovernorat.setAdapter(governoratAdapter);
 
         ArrayAdapter cityAdapter = new ArrayAdapter(container.getContext(), android.R.layout.simple_spinner_dropdown_item, cityList);

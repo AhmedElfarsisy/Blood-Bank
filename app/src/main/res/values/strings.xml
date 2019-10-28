@@ -26,6 +26,9 @@
     <string name="tab2">Donation orders</string>
     <string name="awareness_way_from_diseases">Awareness way from diseases</string>
     <string name="insert_search_word_here">Insert search word here...</string>
+    <string name="generatedtext">generatedtext</string>
+    <string name="details">Details</string>
+    <string name="call">call</string>
 
 
 </resources>
