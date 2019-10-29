@@ -20,6 +20,7 @@ import android.widget.Spinner;
 
 import com.eng.elfarsisy.bloodbank.R;
 import com.eng.elfarsisy.bloodbank.adapter.ArticleAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,7 @@ public class ArticlesFragment extends Fragment {
     RecyclerView articleRecycler;
     Spinner searchItem;
     List<String> searchItemList;
+    FloatingActionButton floatingActionButton;
     public ArticlesFragment() {
         // Required empty public constructor
     }
@@ -46,6 +48,14 @@ public class ArticlesFragment extends Fragment {
         articleRecycler = view.findViewById(R.id.recyclerarticl);
         search = view.findViewById(R.id.searchtxt);
         searchItem=view.findViewById(R.id.search_item);
+        floatingActionButton = view.findViewById(R.id.adddonationrequest1);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().addToBackStack("ArticlesFragment").replace(R.id.main_container, new DonationRequestFragment()).commit();
+            }
+
+        });
         searchItemList=new ArrayList<>();
         searchItemList.add("الوقاية");
 
@@ -58,7 +68,6 @@ public class ArticlesFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         articleRecycler.setLayoutManager(linearLayoutManager);
         articleRecycler.setAdapter(articleAdapter);
-
 
 
         return view;

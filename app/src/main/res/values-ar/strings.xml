@@ -28,4 +28,11 @@
         إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.</string>
     <string name="details">التفاصيل</string>
     <string name="call">اتصال</string>
+    <string name="donation_request">طلب التبرع</string>
+    <string name="age">العمر</string>
+    <string name="hospital">اسم المستشفى</string>
+    <string name="hospital_address">عنوان المستشفى</string>
+    <string name="notes">ملاحظات</string>
+    <string name="sign_up">تسجيل</string>
+    <string name="send_request">ارسال الطلب</string>
 </resources>

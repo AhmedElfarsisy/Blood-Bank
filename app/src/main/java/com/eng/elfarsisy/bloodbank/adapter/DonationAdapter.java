@@ -47,21 +47,20 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.Donati
     }
 
     public class DonationHolder extends RecyclerView.ViewHolder {
-//        TextView bloodtypetxtview;
-//        Button donationRequestDetails;
+        Button donationDetails;
 
         public DonationHolder(@NonNull View itemView) {
             super(itemView);
-//            donationRequestDetails = itemView.findViewById(R.id.donationrequestdetails);
-//            donationRequestDetails.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    fm.beginTransaction()
-//                            .replace(R.id.main_container, new DonationDetailsFragment())
-//                            .addToBackStack("DonationOrderFragment")
-//                            .commit();
-//                }
-//            });
+            donationDetails = itemView.findViewById(R.id.donationrequestdetails);
+            donationDetails.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    fm.beginTransaction().replace(R.id.main_container, new DonationDetailsFragment())
+                            .addToBackStack("DonationOrderFragment")
+                            .commit();
+                }
+            });
+
         }
     }
 }

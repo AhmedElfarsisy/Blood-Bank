@@ -29,6 +29,13 @@
     <string name="generatedtext">generatedtext</string>
     <string name="details">Details</string>
     <string name="call">call</string>
+    <string name="donation_request">Donation Request</string>
+    <string name="age">Age</string>
+    <string name="hospital">hospital</string>
+    <string name="hospital_address">hospital address</string>
+    <string name="notes">Notes</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="send_request">Send Request</string>
 
 
 </resources>

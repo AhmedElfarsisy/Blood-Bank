@@ -4,15 +4,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.appcompat.widget.Toolbar;
 
 import com.eng.elfarsisy.bloodbank.R;
 import com.eng.elfarsisy.bloodbank.adapter.MainPager;
+import com.eng.elfarsisy.bloodbank.ui.fragment.DonationRequestFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,9 +37,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.navigationicon);
         MainPager adapter = new MainPager(getSupportFragmentManager(), MainActivity.this);
         viewPager.setAdapter(adapter);
+//
+//        Intent intent = getIntent();
+//        if (intent!=null){
+//            intent.getExtras().get("address");
+//        }
 
     }
-
 
 
     @Override

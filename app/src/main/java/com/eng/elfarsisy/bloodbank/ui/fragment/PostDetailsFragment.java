@@ -42,11 +42,11 @@ public class PostDetailsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_post_details, container, false);
         detailsToolbar = view.findViewById(R.id.detailstoolbar);
-
         ((AppCompatActivity) getActivity()).setSupportActionBar(detailsToolbar);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.backicon);
+
         likedetalis = view.findViewById(R.id.detaillike);
 
         likedetalis.setOnClickListener(new View.OnClickListener() {
@@ -72,4 +72,6 @@ public class PostDetailsFragment extends Fragment {
         inflater.inflate(R.menu.notificationmenu, menu);
 
     }
+
+
 }

@@ -15,6 +15,7 @@ import android.widget.Spinner;
 
 import com.eng.elfarsisy.bloodbank.R;
 import com.eng.elfarsisy.bloodbank.adapter.DonationAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class DonationOrderFragment extends Fragment {
     Spinner donerBloodtype;
     List<String> donarcityList;
     List<String> donarbloodtypeList;
-
+    FloatingActionButton floatingActionButton;
 
     public DonationOrderFragment() {
         // Required empty public constructor
@@ -44,7 +45,14 @@ public class DonationOrderFragment extends Fragment {
 
         donerCity = view.findViewById(R.id.donarcity);
         donerBloodtype = view.findViewById(R.id.donerBloodType);
+        floatingActionButton = view.findViewById(R.id.adddonationrequest2);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().addToBackStack("DonationOrderFragment").replace(R.id.main_container, new DonationRequestFragment()).commit();
+            }
 
+        });
         donarcityList = new ArrayList<>();
         donarcityList.add("اختر المدينة");
         donarcityList.add("Giza");
@@ -67,7 +75,7 @@ public class DonationOrderFragment extends Fragment {
         donerCity.setAdapter(spinneradaptercity);
 
         donationRecycler = view.findViewById(R.id.donationrecycler);
-        DonationAdapter donationAdapter = new DonationAdapter(container.getContext(),getFragmentManager());
+        DonationAdapter donationAdapter = new DonationAdapter(getActivity(), getFragmentManager());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         donationRecycler.setLayoutManager(linearLayoutManager);
         donationRecycler.setAdapter(donationAdapter);

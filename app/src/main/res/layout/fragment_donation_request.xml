@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightgray"
     android:orientation="vertical"
-    tools:context=".ui.fragment.RegisterFragment">
+    tools:context=".ui.fragment.DonationRequestFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/requesttoolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -22,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/register"
+            android:text="@string/donation_request"
             android:textColor="@color/darkBlue" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -38,7 +37,7 @@
 
 
             <EditText
-                android:id="@+id/regName"
+                android:id="@+id/requestname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -53,7 +52,7 @@
                 android:textColorHint="@color/gray" />
 
             <EditText
-                android:id="@+id/regEmail"
+                android:id="@+id/requestage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -62,30 +61,14 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/reg_edittext_style"
                 android:ems="10"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress"
+                android:hint="@string/age"
+                android:inputType="numberDecimal"
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/gray" />
 
-            <EditText
-                android:id="@+id/regBirthDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/reg_edittext_style"
-                android:drawableLeft="@drawable/dateicon"
-                android:ems="10"
-                android:hint="@string/birthday"
-                android:inputType="date"
-                android:textColor="@color/darkBlue"
-                android:textColorHint="@color/gray" />
 
             <EditText
-
-                android:id="@+id/regBloodType"
+                android:id="@+id/requestbloodtype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -99,9 +82,25 @@
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/gray" />
 
-            <EditText
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:orientation="vertical">
 
-                android:id="@+id/regLastDonate"
+                <Spinner
+                    android:id="@+id/casenumber"
+                    style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/requesthospital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -109,45 +108,79 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/reg_edittext_style"
-                android:drawableLeft="@drawable/dateicon"
                 android:ems="10"
-                android:hint="@string/last_donetion_date"
-                android:inputType="date"
+                android:hint="@string/hospital"
+                android:inputType="textPersonName"
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/gray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/requesthospitaladdress"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/reg_edittext_style"
+                    android:ems="10"
+                    android:hint="@string/hospital_address"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/darkBlue"
+                    android:textColorHint="@color/gray" />
+
+                <ImageButton
+                    android:id="@+id/requestlocation"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/white"
+                    android:src="@drawable/locationbtnicon" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp">
+                android:layout_marginRight="16dp"
+                android:background="@color/white"
+                android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/regGovernorate"
-                style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/requestgovernorate"
+                    style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
                 <View
                     android:id="@+id/view"
 
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
                     android:background="@color/lightgray"
-                    android:visibility="visible"
-                    />
+                    android:visibility="visible" />
 
-            <Spinner
-                android:id="@+id/regCity"
-                style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                 />
+                <Spinner
+                    android:id="@+id/requestcity"
+                    style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
+
             <EditText
-                android:id="@+id/regPhone"
+                android:id="@+id/requestPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -163,35 +196,19 @@
                 android:textColorHint="@color/gray" />
 
             <EditText
-                android:id="@+id/regPassword"
+                android:id="@+id/editText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/reg_edittext_style"
-                android:ems="10"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:textColor="@color/darkBlue"
-                android:textColorHint="@color/gray" />
-
-            <EditText
-                android:id="@+id/regPassword2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/reg_edittext_style"
                 android:ems="10"
-                android:hint="@string/confirm_password"
-                android:inputType="textPassword"
-                android:textColor="@color/darkBlue"
-                android:textColorHint="@color/gray" />
+                android:hint="@string/notes"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
 
             <Button
                 android:id="@+id/RegisterBtn"
@@ -202,8 +219,11 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/darkBlue"
-                android:text="@string/sign_up"
+                android:text="@string/send_request"
                 android:textColor="@color/white" />
+
         </LinearLayout>
     </ScrollView>
+
+
 </LinearLayout>

@@ -30,10 +30,7 @@ public class MainPager extends FragmentPagerAdapter {
             case 1:
                 fragment = new DonationOrderFragment();
                 break;
-            default:
-                fragment = new ArticlesFragment();
-                break;
-        }
+              }
         return fragment;
     }
 
