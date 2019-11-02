@@ -41,11 +41,6 @@ public class PostDetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_post_details, container, false);
-        detailsToolbar = view.findViewById(R.id.detailstoolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(detailsToolbar);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.backicon);
 
         likedetalis = view.findViewById(R.id.detaillike);
 
@@ -73,5 +68,14 @@ public class PostDetailsFragment extends Fragment {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                getActivity().onBackPressed();
+                return true;
+        }
 
+        return super.onOptionsItemSelected(item);
+    }
 }

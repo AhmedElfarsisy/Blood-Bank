@@ -7,24 +7,6 @@
     android:orientation="vertical"
     tools:context=".ui.fragment.DonationRequestFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/requesttoolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/toolbarTheme">
-
-        <TextView
-            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/donation_request"
-            android:textColor="@color/darkBlue" />
-    </androidx.appcompat.widget.Toolbar>
-
 
     <ScrollView
         android:layout_width="match_parent"

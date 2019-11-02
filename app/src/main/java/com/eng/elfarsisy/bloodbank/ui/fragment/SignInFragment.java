@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.eng.elfarsisy.bloodbank.R;
+import com.eng.elfarsisy.bloodbank.ui.activity.HomeActivity;
 import com.eng.elfarsisy.bloodbank.ui.activity.MainActivity;
 
 /**
@@ -59,7 +60,7 @@ public class SignInFragment extends Fragment {
                 String phone = signPhone.getText().toString().trim();
                 String password = signPassword.getText().toString().trim();
                 if (!TextUtils.isEmpty(phone) && !TextUtils.isEmpty(password)) {
-                    startActivity(new Intent(getActivity(), MainActivity.class));
+                    startActivity(new Intent(getActivity(), HomeActivity.class));
                 } else {
                     Toast.makeText(getActivity(), "complet fields", Toast.LENGTH_SHORT).show();
                 }

@@ -75,7 +75,7 @@ public class DonationOrderFragment extends Fragment {
         donerCity.setAdapter(spinneradaptercity);
 
         donationRecycler = view.findViewById(R.id.donationrecycler);
-        DonationAdapter donationAdapter = new DonationAdapter(getActivity(), getFragmentManager());
+        DonationAdapter donationAdapter = new DonationAdapter(container.getContext(), getFragmentManager());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         donationRecycler.setLayoutManager(linearLayoutManager);
         donationRecycler.setAdapter(donationAdapter);

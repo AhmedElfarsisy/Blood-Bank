@@ -35,6 +35,7 @@ public class ArticlesFragment extends Fragment {
     Spinner searchItem;
     List<String> searchItemList;
     FloatingActionButton floatingActionButton;
+
     public ArticlesFragment() {
         // Required empty public constructor
     }
@@ -47,7 +48,7 @@ public class ArticlesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_articles, container, false);
         articleRecycler = view.findViewById(R.id.recyclerarticl);
         search = view.findViewById(R.id.searchtxt);
-        searchItem=view.findViewById(R.id.search_item);
+        searchItem = view.findViewById(R.id.search_item);
         floatingActionButton = view.findViewById(R.id.adddonationrequest1);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,14 +57,14 @@ public class ArticlesFragment extends Fragment {
             }
 
         });
-        searchItemList=new ArrayList<>();
+        searchItemList = new ArrayList<>();
         searchItemList.add("الوقاية");
 
         ArrayAdapter spinneradapter = new ArrayAdapter(container.getContext(), android.R.layout.simple_spinner_dropdown_item, searchItemList);
         spinneradapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         searchItem.setAdapter(spinneradapter);
 
-        articleAdapter = new ArticleAdapter(container.getContext(),getFragmentManager());
+        articleAdapter = new ArticleAdapter(container.getContext(), getFragmentManager());
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         articleRecycler.setLayoutManager(linearLayoutManager);

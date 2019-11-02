@@ -28,15 +28,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        viewPager = findViewById(R.id.viewpager);
-        tabLayout = findViewById(R.id.tabs);
-        mainToolbar = findViewById(R.id.maintoolbar);
-        setSupportActionBar(mainToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.navigationicon);
-        MainPager adapter = new MainPager(getSupportFragmentManager(), MainActivity.this);
-        viewPager.setAdapter(adapter);
+
+//        setSupportActionBar(mainToolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setTitle("");
+
 //
 //        Intent intent = getIntent();
 //        if (intent!=null){
