@@ -35,4 +35,13 @@
     <string name="notes">ملاحظات</string>
     <string name="sign_up">تسجيل</string>
     <string name="send_request">ارسال الطلب</string>
+    <string name="personal_information">معلوماتى</string>
+    <string name="notification_settings">اعدادات الاشعارات</string>
+    <string name="favorit">المفضلة</string>
+    <string name="using_instruction">تعليمات الاستخدام</string>
+    <string name="contact_with_us">تواصل معنا</string>
+    <string name="about_us">عن التطبيق</string>
+    <string name="exit">تسجيل الخروج</string>
+    <string name="home">الرئيسية</string>
+    <string name="rate_app_in_store">تقيم التطبيق على متجر</string>
 </resources>

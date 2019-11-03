@@ -4,40 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
-
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:id="@+id/nav_personalinfo"
+        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.PersonalInfo.PersonalInfo"
+        android:label="@string/personal_information"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:id="@+id/nav_notification"
+        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.Notification.Notification"
+        android:label="@string/notification_settings"
+        tools:layout="@layout/fragment_send" />
+
+    <fragment
+        android:id="@+id/nav_favorit"
+        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.favorit.Favorit"
+        android:label="@string/favorit"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_instruction"
+        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.usinginstruction.UsingInstrution"
+        android:label="@string/using_instruction"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
+        android:id="@+id/nav_contact"
+        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.contactus.ContactUs"
+        android:label="@string/contact_with_us"
         tools:layout="@layout/fragment_tools" />
-
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        android:id="@+id/nav_aboutapp"
+        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.aboutus.aboutUs"
+        android:label="@string/about_us"
+        tools:layout="@layout/fragment_about_us" />
 
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.eng.elfarsisy.bloodbank.ui.activity.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+
 </navigation>

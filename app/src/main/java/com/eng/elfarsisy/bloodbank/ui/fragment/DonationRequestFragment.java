@@ -83,11 +83,7 @@ public class DonationRequestFragment extends Fragment {
 
 
         requestHospitalAddress = view.findViewById(R.id.requesthospitaladdress);
-        requestToolbar = view.findViewById(R.id.requesttoolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(requestToolbar);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.backicon);
+
         hospitallocation = view.findViewById(R.id.requestlocation);
         hospitallocation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,12 +105,6 @@ public class DonationRequestFragment extends Fragment {
         return view;
     }
 
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.notificationmenu, menu);
-
-    }
 
 
 }
