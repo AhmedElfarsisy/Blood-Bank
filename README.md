@@ -1,6 +1,6 @@
 # Blood-Bank
 App to donate with blood and get a blood donor 
-Sign in, sign up, read articls, add donation , see all donor and thier info
+Sign in, sign up, read articls, add donation , see all donor and their info
 
 # Fragments 
 # SliderShow with annimation 
